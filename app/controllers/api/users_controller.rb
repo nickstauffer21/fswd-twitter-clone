@@ -6,7 +6,7 @@ module Api
       if @user.save
         render 'api/users/create', status: :created
       else
-        render json: { success: false }, status: :bad_request
+        render json: { success: false }
       end
     end
 

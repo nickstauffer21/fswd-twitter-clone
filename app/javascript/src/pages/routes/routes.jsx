@@ -3,15 +3,19 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Dashboard from "../dashboard/dashboard";
-import UserPage from "../user/userPage";
-import UserPublic from "../userPublic/userPublic";
+import User from "../user-private/user-private";
+import Navbar from "@src/comp/navbar/navbar";
+import UserPublic from "../user-public/user-public";
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
     <Router>
       <div>
+        <Navbar />
         <Routes>
-          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route path="/user/:username" element={<UserPublic />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>,

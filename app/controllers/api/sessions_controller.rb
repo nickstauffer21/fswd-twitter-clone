@@ -1,7 +1,9 @@
 module Api
   class SessionsController < ApplicationController
     def create
-      @user = User.find_by(username: params[:user][:username])
+      puts params
+
+      @user = User.find_by(email: params[:user][:email])
 
       if @user && (BCrypt::Password.new(@user.password) == params[:user][:password])
         session = @user.sessions.create

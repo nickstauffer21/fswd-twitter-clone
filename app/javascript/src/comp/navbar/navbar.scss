@@ -1,0 +1,63 @@
+.container-lg {
+  padding: 20px 40px 0 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Align items with equal space between them */
+}
+
+.navbar a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown button {
+  background-color: rgb(83, 52, 14);
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.nav-item {
+  display: block;
+}
+
+.nav-item a {
+  color: rgb(0, 0, 0);
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+.dropdown .content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100px;
+  background-color: rgb(207, 4, 4);
+  box-shadow: 2px 2px 5px hsla(0%, 0%, 0%, 0.8);
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
+.content {
+  margin: 0;
+}

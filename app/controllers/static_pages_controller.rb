@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
-  def home
-    render 'home'
+  def dashboard
   end
   def login
     render 'login'
